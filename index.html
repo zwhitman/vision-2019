@@ -1,141 +1,458 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>CEDSCI Overview</title>
+    <title>ACS '19 CEDSCI Overview</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					CEDSCI Overview
-				</section>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-background-image="img/title-card.png">
+            <h3 style="margin-top:500px">
+              <span style="color:white;opacity:1;text-align:center"
+                >CEDSCI</span
+              >
+            </h3>
+            <p style="color:white;font-size:.6em;opacity:.6">
+              Zach Whitman, CDO
+            </p>
+          </section>
 
-				<section>
-					<section>
-						we are overhauling the way we disseminate data
-					</section>
-					<section>
-						all public data will flow through CEDSCI
-					</section>
-					<section>
-						our data providers will have an easier time releasing their data
-					</section>
-					<section>
-						and our users shouldn't have be an census expert to use census data accurately and efficiently
-					</section>
-					<section>
-						<img src="img/arch.png" width="40%" alt="">
-					</section>
-				</section>
-				<section>
-					<section>
-					<p>
-						we have 3 main targets
-					</p>
-					<hr>
-					<ul>
-						<li>census.gov</li>
-						<li>data dissemination tools</li>
-						<li>data services</li>
-					</ul>
-					</section>
-					<section>
-						we want data to be everywhere on census.gov
-					</section>
-					<section>
-						we want to maintain less code
-					</section>
-					<section>
-						we want developers to use our stuff
-					</section>
-				</section>
-				<section>
-					<section>
-						so what does this look like?
-					</section>
-					<section>
-						<img src="img/census-search-orig.png" alt="">
-					</section>
-					<section>
-						<img src="img/pi14-censusGov.png" alt="">
-					</section>
-					<section>
-						<img src="img/Ed-attain-orig.png" alt="">
-					</section>
-					<section>
-						<img src="img/ed-attain-all.png" alt="">
-					</section>
-					<section>
-						<img src="img/censusGov-int.png" alt="">
-					</section>
-				</section>
-				<section>
-					<section>
-						we need to consolidate our app experiences
-					</section>
-					<section>
-						<img src="img/pelosi-orig.png" alt="">
-					</section>
-					<section>
-						<img src="img/pelosi-full.png" alt="">
-					</section>
-					<section>
-						<img src="img/google-orig.png" alt="">
-					</section>
-					<section>
-						<img src="img/google-future.png" alt="">
-					</section>
-				</section>
-				<section>
-					<section>
-						help devs use our data
-					</section>
-					<section>
-						<img src="img/dev-landing.jpg" width="30%" alt="">
-					</section>
-					<section>
-						<img src="img/docs-detail.jpg" width="90%" alt="">
-					</section>
-					<section>
-						<img src="img/sandbox-detail.jpg" width="50%" alt="">
-					</section>
-				</section>
-			</div>
-		</div>
+          <section>
+            <h3>
+              let's get right into it
+            </h3>
+            <hr />
+            <p>
+              we have a new data dissemination platform that<br />
+              <strong><u>is replacing American FactFinder</u></strong>
+            </p>
+          </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+          <section data-background-image="img/timeline.png"></section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+          <section>
+            <p>why are we doing this?</p>
+          </section>
+
+          <section>
+            <p>it's not open</p>
+            <p>it's not centralized</p>
+            <p>it's not extensible</p>
+            <p>it's not responsive</p>
+            <p>it's not sustainable</p>
+          </section>
+
+          <section>
+            <p>we know we're in for it</p>
+          </section>
+
+          <section data-background-image="img/adoption-curve.png"></section>
+          <section data-background-image="img/cedsci-curve.png"></section>
+
+          <section>
+            <p>who remembers the transition from AFF1 to AFF2?</p>
+          </section>
+
+          <section>
+            <p>so how do we get ahead of the curve?</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <p>user feedback</p>
+          </section>
+
+          <section>
+            <p>user feedback shapes the product <u>as we build it</u>.</p>
+          </section>
+          <section>
+            <p>how are we approaching this?</p>
+          </section>
+          <section>
+            <p>
+              we work iteratively
+            </p>
+            <p>
+              we release code every 40 days
+            </p>
+            <p>we communicate as much as possible</p>
+            <p>we try to manage expectations</p>
+            <p>
+              we take every comment we receive seriously*
+            </p>
+          </section>
+
+          <section>
+            how is it working?
+          </section>
+
+          <section data-background-image="img/total-responses.png"></section>
+          <section data-background-image="img/feedback-types.png"></section>
+          <section data-background-image="img/sub-types.png"></section>
+          <section data-background-image="img/user-groups.png"></section>
+
+          <section style="text-align:left">
+            <p>
+              subject: downloading tables in data.census.gov
+            </p>
+            <i style="font-size:.7em">
+              <u>I regularly use tables from American Factfinder</u>. Many
+              times, I copy the table directly from the webpage and paste it
+              into my Excel spreadsheet rather than downloading the data file.
+              That doesn’t seem to be an option anymore...
+              <u
+                >For the way I use ACS data, this is a step backwards that
+                requires more time on my end rather than an improvement</u
+              >. I do like other features of the new system, though, so I hope
+              you’ll create a way to make 'grabbing' data directly from the
+              webpage possible and/or much easier. Thank you!
+            </i>
+          </section>
+          <section style="text-align:left">
+            <p>subject: ACS data from 2005-2009 on data.census.gov?</p>
+            <i style="font-size:.7em">
+              <u>Do you have plans to add ACS data from 2005-2009</u> on the
+              data.census.gov, or will this only live on American FactFinder (if
+              that continues to live?)
+            </i>
+          </section>
+
+          <section style="text-align:left">
+            <p>subject: please keep using FactFinder with new data</p>
+            <i style="font-size:.7em">
+              Please keep updating American FactFinder with the latest data
+              until you have the new system working usefully. I just tried to
+              use the new advanced search to figure out how to seek information
+              for several Zip Codes and the
+              <u
+                >response was awful. There's an enormous drop down list under
+                Geography</u
+              >
+              before you even get to Zip Codes, and then the various Zip Code
+              options are confusing...<u
+                >Surely you can feed the new data into FactFinder if you wish</u
+              >.
+            </i>
+          </section>
+
+          <section style="text-align:left">
+            <p>subject: New data experience</p>
+            <i style="font-size:.7em">
+              <u>I went straight to the Advanced Search</u>, because that is
+              where I spend almost all of my time in the American FactFinder
+              (which works just fine for me). I am very troubled and I think
+              that interface needs a lot of work.
+              <u
+                >I fear the changes are going to interfere significantly with my
+                work</u
+              >
+            </i>
+          </section>
+          <section style="text-align:left">
+            <p>subject: terrible</p>
+            <i style="font-size:.7em">
+              <u>This site is terrible</u>, the tables are too hard to find, and
+              cannot be exported to Excel. The previous version waqs must more
+              user-friendly, easier to maneuver and functional. This new version
+              is a total mess.
+            </i>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <p>so what does this thing look like?</p>
+          </section>
+          <section data-background-image="img/flow.png"></section>
+          <section
+            data-background-iframe="https://data.census.gov"
+            data-background-interactive
+          ></section>
+        </section>
+
+        <section>
+          <section>
+            where are we going?
+          </section>
+          <section>
+            <p>defect/performance tuning</p>
+            <p>usability refinements</p>
+            <p>search improvements</p>
+            <p>table enhancements</p>
+            <p>map enhancements</p>
+            <p>developer experience</p>
+          </section>
+
+          <section>
+            <p>defect/performance tuning</p>
+            <hr />
+            <p>lighter footprint</p>
+            <p>cleaner state handling</p>
+            <p>no runaway scripts</p>
+            <p>table display issues</p>
+          </section>
+
+          <section>
+            <p>usability refinements</p>
+            <hr />
+            <p>improved download experience</p>
+            <p>cleaner geography navigation</p>
+            <p>more pseudogeos</p>
+            <p>mobile experience</p>
+          </section>
+
+          <section>
+            <p>search refinements</p>
+            <hr />
+            <p>improved entity recognition</p>
+            <p>relevancy improvements</p>
+            <p>improved disambiguation</p>
+            <p>synonym generation and related</p>
+            <p>contextual awareness</p>
+          </section>
+
+          <section>
+            <p>table enhancements</p>
+            <hr />
+            <p>row/column freezing</p>
+            <p>sorting/multi-column sort</p>
+            <p>lazy loading</p>
+            <p>excel export</p>
+            <p>copy/paste to excel</p>
+            <p>improved full table layout/display</p>
+            <p>cell wrapping</p>
+          </section>
+
+          <section>
+            <p>map enhancements</p>
+            <hr />
+            <p>search integration</p>
+            <p>geography+data export (geojson/shapefile/kml)</p>
+            <p>image export</p>
+            <p>geocoder</p>
+            <p>vintage comparisons</p>
+            <p>label controls</p>
+            <p>user-loaded shapes</p>
+          </section>
+
+          <section>
+            <p>developer experience</p>
+            <hr />
+            <p>documented API services</p>
+            <p>data query builder</p>
+            <p>API status information</p>
+            <p>published pattern library</p>
+            <p>package integration with python and R</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            we need your help
+          </section>
+          <section style="text-align:left">
+            please go to
+            <a href="https://data.census.gov">data.census.gov</a> and tell us
+            <hr />
+            <ol>
+              <li>
+                what you like
+              </li>
+              <li>
+                don't like; and
+              </li>
+              <li>
+                want to see in the future
+              </li>
+            </ol>
+          </section>
+          <section>
+            we can't do this without you
+          </section>
+          <section>
+            <p>thank you</p>
+            <hr />
+            <p><a href="https://data.census.gov">data.census.gov</a></p>
+            <p>
+              <a href="mailto:zachary.richard.whitman@census.gov"
+                >zachary.richard.whitman@census.gov</a
+              >
+            </p>
+            <p>
+              <a href="mailto:cedsci.feedback@census.gov"
+                >cedsci.feedback@census.gov</a
+              >
+            </p>
+            <p></p>
+          </section>
+        </section>
+
+        <!--
+
+        <section>
+          <section>
+            we are overhauling the way we disseminate data
+          </section>
+          <section>
+            why are we doing this?
+          </section>
+          <section>
+            a few of our guiding priciples
+            <ul>
+              <li>
+                User feedback drives enterprise dissemination decisions about
+                public products and user tools.
+              </li>
+              <li>
+                User-customizable information services are available anytime,
+                anywhere from any device.
+              </li>
+              <li>
+                Flexible tools are preferred over products for content delivery.
+              </li>
+              <li>
+                Data is decoupled from presentation.
+              </li>
+            </ul>
+          </section>
+          <section>
+            all public data will flow through CEDSCI
+          </section>
+          <section>
+            our data providers will have an easier time releasing their data
+          </section>
+          <section>
+            and our users shouldn't have be an census expert to use census data
+            accurately and efficiently
+          </section>
+          <section>
+            <img src="img/arch.png" width="40%" alt="" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <p>
+              we have 3 main targets
+            </p>
+            <hr />
+            <ul>
+              <li>census.gov</li>
+              <li>data dissemination tools</li>
+              <li>data services</li>
+            </ul>
+          </section>
+          <section>
+            we want data to be everywhere on census.gov
+          </section>
+          <section>
+            we want to maintain less code
+          </section>
+          <section>
+            we want developers to use our stuff
+          </section>
+        </section>
+        <section>
+          <section>
+            so what does this look like?
+          </section>
+          <section>
+            <img src="img/census-search-orig.png" alt="" />
+          </section>
+          <section>
+            <img src="img/pi14-censusGov.png" alt="" />
+          </section>
+          <section>
+            <img src="img/Ed-attain-orig.png" alt="" />
+          </section>
+          <section>
+            <img src="img/ed-attain-all.png" alt="" />
+          </section>
+          <section>
+            <img src="img/censusGov-int.png" alt="" />
+          </section>
+        </section>
+        <section>
+          <section>
+            we need to consolidate our app experiences
+          </section>
+          <section>
+            <img src="img/pelosi-orig.png" alt="" />
+          </section>
+          <section>
+            <img src="img/pelosi-full.png" alt="" />
+          </section>
+          <section>
+            <img src="img/google-orig.png" alt="" />
+          </section>
+          <section>
+            <img src="img/google-future.png" alt="" />
+          </section>
+        </section>
+        <section>
+          <section>
+            help devs use our data
+          </section>
+          <section>
+            <img src="img/dev-landing.jpg" width="30%" alt="" />
+          </section>
+          <section>
+            <img src="img/docs-detail.jpg" width="90%" alt="" />
+          </section>
+          <section>
+            <img src="img/sandbox-detail.jpg" width="50%" alt="" />
+          </section>
+        </section>
+				-->
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          {src: 'plugin/markdown/marked.js'},
+          {src: 'plugin/markdown/markdown.js'},
+          {src: 'plugin/notes/notes.js', async: true},
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
 </html>
